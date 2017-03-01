@@ -1,0 +1,251 @@
+$date
+     Mar 01, 2017       23:51:59
+$end
+
+$version
+ SystemC 2.3.1-Accellera --- Feb 18 2017 01:17:28
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  clock       $end
+$var wire    1  aaaab  reset       $end
+$var wire    1  aaaac  sync_reset       $end
+$var wire    1  aaaad  left_right       $end
+$var wire    1  aaaae  d       $end
+$var wire    8  aaaaf  register_out [7:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaaaa
+0aaaab
+0aaaac
+0aaaad
+1aaaae
+b0 aaaaf
+$end
+
+#2000
+0aaaaa
+
+#4000
+1aaaaa
+b1 aaaaf
+
+#6000
+0aaaaa
+
+#7000
+1aaaab
+b0 aaaaf
+
+#8000
+1aaaaa
+
+#10000
+0aaaaa
+
+#12000
+1aaaaa
+
+#14000
+0aaaaa
+
+#16000
+1aaaaa
+
+#17000
+0aaaab
+
+#18000
+0aaaaa
+
+#20000
+1aaaaa
+b1 aaaaf
+
+#22000
+0aaaaa
+
+#23000
+1aaaac
+
+#24000
+1aaaaa
+b0 aaaaf
+
+#26000
+0aaaaa
+
+#28000
+1aaaaa
+
+#30000
+0aaaaa
+0aaaac
+
+#32000
+1aaaaa
+b1 aaaaf
+
+#34000
+0aaaaa
+
+#36000
+1aaaaa
+b11 aaaaf
+
+#37000
+0aaaae
+
+#38000
+0aaaaa
+
+#40000
+1aaaaa
+b110 aaaaf
+
+#42000
+0aaaaa
+
+#44000
+1aaaaa
+b1100 aaaaf
+
+#46000
+0aaaaa
+
+#48000
+1aaaaa
+b11000 aaaaf
+
+#50000
+0aaaaa
+1aaaad
+
+#52000
+1aaaaa
+b1100 aaaaf
+
+#54000
+0aaaaa
+
+#56000
+1aaaaa
+b110 aaaaf
+
+#58000
+0aaaaa
+
+#60000
+1aaaaa
+b11 aaaaf
+
+#62000
+0aaaaa
+
+#64000
+1aaaaa
+b1 aaaaf
+
+#66000
+0aaaaa
+
+#68000
+1aaaaa
+b0 aaaaf
+
+#70000
+0aaaaa
+
+#72000
+1aaaaa
+
+#73000
+1aaaae
+
+#74000
+0aaaaa
+
+#76000
+1aaaaa
+b10000000 aaaaf
+
+#78000
+0aaaaa
+
+#80000
+1aaaaa
+b11000000 aaaaf
+
+#82000
+0aaaaa
+
+#84000
+1aaaaa
+b11100000 aaaaf
+
+#86000
+0aaaaa
+
+#88000
+1aaaaa
+b11110000 aaaaf
+
+#90000
+0aaaaa
+
+#92000
+1aaaaa
+b11111000 aaaaf
+
+#94000
+0aaaaa
+
+#96000
+1aaaaa
+b11111100 aaaaf
+
+#98000
+0aaaaa
+1aaaab
+b0 aaaaf
+
+#100000
+1aaaaa
+
+#102000
+0aaaaa
+
+#104000
+1aaaaa
+
+#106000
+0aaaaa
+
+#108000
+1aaaaa
+
+#110000
+0aaaaa
+
+#112000
+1aaaaa
+
+#114000
+0aaaaa
+
+#116000
+1aaaaa
+
+#118000
+0aaaaa
+
