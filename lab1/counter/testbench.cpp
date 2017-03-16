@@ -39,28 +39,43 @@ int sc_main(int argc, char* argv[]) {
     sc_start(4, SC_NS);
     assert(cnt_register_out.read() == 0);
     sc_start(3, SC_NS);
-    
+	//7ns
+    assert(cnt_register_out.read() == 0);
+
     ena = 1;
     sc_start(3, SC_NS);
+	//10ns
     assert(cnt_register_out.read() == 1);
 
     reset = 1;
     sc_start(9, SC_NS);
+	//19ns
     assert(cnt_register_out.read() == 0);
     
     reset = 0;
     sc_start(2, SC_NS);
-    
+    //21ns
+
     sync_reset = 1;
-    sc_start(10, SC_NS);
-    sync_reset = 0;
+
+	sc_start(3, SC_NS);
+	//24ns
+	assert(cnt_register_out.read() == 1);
+
+    sc_start(7, SC_NS);
+	//31ns
 	assert(cnt_register_out.read() == 0);
+
+    sync_reset = 0;
     sc_start(1, SC_NS);
+	//32ns
 
     sc_start(27, SC_NS);
+	//59ns
     assert(cnt_register_out.read() == 7);
     ena = 0;
     sc_start(26, SC_NS);
+	//85 ns
     assert(cnt_register_out.read() == 7);
 
     reset = 1; // Assert the reset
