@@ -1,5 +1,5 @@
 //-----------------------------------------------------
-// Testbench for the register ---------------->
+// Testbench for the sdvig_rgister ---------------->
 //-----------------------------------------------------
 #include "systemc.h"
 #include "sdvig_register.h"

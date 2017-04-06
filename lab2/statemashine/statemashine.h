@@ -6,19 +6,18 @@
 SC_MODULE(statemashine) {
     sc_in_clk clock; // Clock input of the design
     sc_in<bool> reset; // active high, asynchronous Reset input
-    sc_in<sc_uint<2> > register_in; // 8 bit vector input
-    sc_out<sc_uint<2> > register_out; // 8 bit vector output
+    sc_in<sc_uint<2> > register_in; // 2 bit vector input
+    sc_out<sc_uint<2> > register_out; // 2 bit vector output
   
     //------------Local Variables Here---------------------
 	sc_signal<sc_uint<2> > state;
     //------------Code Starts Here-------------------------
-    // Below function implements actual register logic
 
     void register_store();
     
     void data_out_method();
 
-    // Constructor for the register
+    // Constructor for the statemachine
     // Since this register is a positive edge trigged one,
     // We trigger the below block with respect to positive
     // edge of the clock and also when ever reset changes state

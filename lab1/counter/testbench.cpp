@@ -1,5 +1,5 @@
 //-----------------------------------------------------
-// Testbench for the register ---------------->
+// Testbench for the counter ---------------->
 //-----------------------------------------------------
 #include "systemc.h"
 #include "counter.h"

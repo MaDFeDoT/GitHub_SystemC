@@ -1,5 +1,5 @@
 //-----------------------------------------------------
-// Testbench for the register ---------------->
+// Testbench for the statemachine ---------------->
 //-----------------------------------------------------
 #include "systemc.h"
 #include "statemashine.h"
@@ -29,6 +29,7 @@ int sc_main(int argc, char* argv[]) {
     sc_trace(wf, reset, "reset");
     sc_trace(wf, register_in, "din");
     sc_trace(wf, register_out, "dout");
+	sc_trace(wf, test_statemashine.state, "state");
 
     reset = 1; // Assert the reset
     cout << "@" << sc_time_stamp() << " Asserting reset\n" << endl;
