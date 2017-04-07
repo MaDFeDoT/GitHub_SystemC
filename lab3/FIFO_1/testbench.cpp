@@ -88,22 +88,27 @@ int sc_main(int argc, char* argv[]) {
 //26ns
 	assert(full.read() == 1);
 
+	data_in=8;
+	sc_start(4, SC_NS);
+//30ns
+	assert(full.read() == 1);
+
 	pop=1;
 	push=0;
 	sc_start(4, SC_NS);
-//30ns
+//34ns
 	assert(full.read() == 0);
 	assert(data_out.read() == 5);
 
 	sc_start(4, SC_NS);
 
-//34ns
+//38ns
 	assert(full.read() == 0);
 	assert(data_out.read() == 6);
 	assert(empty.read() == 1);
 
 	sc_start(8, SC_NS);
-//38ns
+//42ns
 
 	sreset_n = 0; 
 	sc_start(17, SC_NS);

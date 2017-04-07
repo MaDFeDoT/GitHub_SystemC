@@ -1,5 +1,5 @@
 $date
-     Apr 07, 2017       02:39:27
+     Apr 07, 2017       11:58:10
 $end
 
 $version
@@ -37,7 +37,7 @@ b0 aaaac
 b0 aaaaf
 1aaaag
 0aaaah
-0aaaai
+1aaaai
 0aaaaj
 $end
 
@@ -56,7 +56,6 @@ b1100001 aaaac
 #8000
 1aaaaa
 0aaaag
-1aaaai
 
 #10000
 0aaaaa
@@ -68,7 +67,6 @@ b0 aaaac
 1aaaaa
 b1100001 aaaaf
 1aaaag
-0aaaai
 
 #14000
 0aaaaa
@@ -79,7 +77,6 @@ b110010 aaaac
 #16000
 1aaaaa
 0aaaag
-1aaaai
 
 #18000
 0aaaaa
@@ -107,7 +104,6 @@ b1111010 aaaac
 #28000
 1aaaaa
 1aaaah
-0aaaaj
 
 #30000
 0aaaaa
@@ -118,7 +114,6 @@ b1111010 aaaac
 1aaaaa
 b1100110 aaaaf
 0aaaah
-1aaaaj
 
 #34000
 0aaaaa
@@ -136,7 +131,6 @@ b1100001 aaaaf
 1aaaaa
 b1111010 aaaaf
 1aaaag
-0aaaai
 
 #42000
 0aaaaa

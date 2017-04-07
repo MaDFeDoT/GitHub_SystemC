@@ -74,6 +74,7 @@ int sc_main(int argc, char* argv[]) {
 	sc_start(4, SC_NS);
 //14ns
 	assert(empty.read() == 1);
+	assert(almost_empty.read() == 1);
 	assert(data_out.read() == 'a');
 
 	data_in='2';
@@ -101,6 +102,7 @@ int sc_main(int argc, char* argv[]) {
 	sc_start(4, SC_NS);
 //30ns
 	assert(full.read() == 1);
+	assert(almost_full.read() == 1);
 	pop=1;
 	push=0;
 	sc_start(4, SC_NS);
@@ -118,6 +120,7 @@ int sc_main(int argc, char* argv[]) {
 //42ns
 	assert(data_out.read() == 'z');
 	assert(empty.read() == 1);
+	assert(almost_empty.read() == 1);
 
 	sc_start(4, SC_NS);
 //46ns

@@ -20,13 +20,15 @@ public:
 
 template <class T>
 void FIFOParamExtended<T>::almost_out() {
-	if (((FIFOParam<T>::count_of_elements==almost_level) && (FIFOParam<T>::push_event==FIFOParam<T>::pop_event)) ||
-		((FIFOParam<T>::count_of_elements==almost_level-1) && (FIFOParam<T>::push_event==true) && (FIFOParam<T>::pop_event==false)) ||
-		((FIFOParam<T>::count_of_elements==almost_level+1) && (FIFOParam<T>::push_event==false) && (FIFOParam<T>::pop_event==true))) almost_empty=1;
+	if ((FIFOParam<T>::count_of_elements<almost_level) ||
+		((FIFOParam<T>::count_of_elements==almost_level) && 
+		((FIFOParam<T>::push_event==false) || (FIFOParam<T>::pop_event==true && FIFOParam<T>::push_event==true))) ||
+		((FIFOParam<T>::count_of_elements==almost_level+1) && (FIFOParam<T>::pop_event==true && FIFOParam<T>::push_event==false))
+		) almost_empty=1;
 	else almost_empty=0;
 	
-	if (((FIFOParam<T>::count_of_elements==FIFOParam<T>::size-almost_level) && (FIFOParam<T>::push_event==FIFOParam<T>::pop_event)) ||
-		((FIFOParam<T>::count_of_elements==FIFOParam<T>::size-almost_level-1) && (FIFOParam<T>::push_event==true) && (FIFOParam<T>::pop_event==false)) ||
-		((FIFOParam<T>::count_of_elements==FIFOParam<T>::size-almost_level+1) && (FIFOParam<T>::push_event==false) && (FIFOParam<T>::pop_event==true))) almost_full=1;
+	if ((FIFOParam<T>::count_of_elements>FIFOParam<T>::size-almost_level) ||
+		((FIFOParam<T>::count_of_elements==FIFOParam<T>::size-almost_level) && ((FIFOParam<T>::pop_event==false) || (FIFOParam<T>::pop_event==true && FIFOParam<T>::push_event==true))) ||
+		((FIFOParam<T>::count_of_elements==FIFOParam<T>::size-almost_level-1) && (FIFOParam<T>::push_event==true && FIFOParam<T>::pop_event==false))) almost_full=1;
 	else almost_full=0;
 }
