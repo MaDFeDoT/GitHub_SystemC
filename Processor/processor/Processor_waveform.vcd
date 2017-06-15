@@ -1,5 +1,5 @@
 $date
-     Jun 11, 2017       15:22:44
+     Jun 15, 2017       02:00:51
 $end
 
 $version
@@ -23,38 +23,48 @@ $var wire    1  aaaai  FETCH_branch_valid       $end
 $var wire    1  aaaaj  FETCH_stall_fetch       $end
 $var wire   32  aaaak  FETCH_instruction [31:0]  $end
 $var wire    1  aaaal  FETCH_instruction_valid       $end
-$var wire   32  aaaam  DECODE_dram_dataout [31:0]  $end
-$var wire    1  aaaan  DECODE_dram_rd_valid       $end
-$var wire    1  aaaao  DECODE_mem_access       $end
-$var wire   32  aaaap  DECODE_mem_address [31:0]  $end
-$var wire   32  aaaaq  DECODE_alu_op [31:0]  $end
-$var wire    1  aaaar  DECODE_mem_write       $end
-$var wire   32  aaaas  DECODE_alu_src [31:0]  $end
-$var wire    1  aaaat  DECODE_reg_write       $end
-$var wire   32  aaaau  DECODE_src_A [31:0]  $end
-$var wire   32  aaaav  DECODE_src_B [31:0]  $end
-$var wire    1  aaaaw  DECODE_decode_valid       $end
-$var wire    1  aaaax  DECODE_float_valid       $end
-$var wire   32  aaaay  DCACHE_mmic_dataout [31:0]  $end
-$var wire    1  aaaaz  DCACHE_mmic_out_valid       $end
-$var wire    1  aaaba  EXEC_in_valid       $end
-$var wire    1  aaabb  EXEC_c       $end
-$var wire    1  aaabc  EXEC_v       $end
-$var wire    1  aaabd  EXEC_z       $end
-$var wire   32  aaabe  EXEC_dout [31:0]  $end
-$var wire    1  aaabf  EXEC_out_valid       $end
-$var wire   32  aaabg  EXEC_destout [31:0]  $end
-$var wire   32  aaabh  FLOATING_fdout [31:0]  $end
-$var wire    1  aaabi  FLOATING_fout_valid       $end
-$var wire   32  aaabj  FLOATING_fdestout [31:0]  $end
-$var wire    1  aaabk  PIC_ireq0       $end
-$var wire    1  aaabl  PIC_ireq1       $end
-$var wire    1  aaabm  PIC_ireq2       $end
-$var wire    1  aaabn  PIC_ireq3       $end
-$var wire    1  aaabo  PIC_intreq       $end
-$var wire   32  aaabp  PIC_vectno [31:0]  $end
-$var wire    1  aaabq  PIC_intack_cpu       $end
-$var wire    1  aaabr  CLK       $end
+$var wire    1  aaaam  FETCH_busy       $end
+$var wire   32  aaaan  DECODE_dram_dataout [31:0]  $end
+$var wire    1  aaaao  DECODE_dram_rd_valid       $end
+$var wire    1  aaaap  DECODE_mem_access       $end
+$var wire   32  aaaaq  DECODE_mem_address [31:0]  $end
+$var wire   32  aaaar  DECODE_alu_op [31:0]  $end
+$var wire    1  aaaas  DECODE_mem_write       $end
+$var wire   32  aaaat  DECODE_alu_src [31:0]  $end
+$var wire    1  aaaau  DECODE_reg_write       $end
+$var wire   32  aaaav  DECODE_src_A [31:0]  $end
+$var wire   32  aaaaw  DECODE_src_B [31:0]  $end
+$var wire    1  aaaax  DECODE_decode_valid       $end
+$var wire    1  aaaay  DECODE_float_valid       $end
+$var wire    1  aaaaz  DECODE_gpio_access       $end
+$var wire   32  aaaba  DECODE_dramdata [31:0]  $end
+$var wire    1  aaabb  EXEC_in_valid       $end
+$var wire    1  aaabc  EXEC_c       $end
+$var wire    1  aaabd  EXEC_v       $end
+$var wire    1  aaabe  EXEC_z       $end
+$var wire   32  aaabf  EXEC_dout [31:0]  $end
+$var wire    1  aaabg  EXEC_out_valid       $end
+$var wire   32  aaabh  EXEC_destout [31:0]  $end
+$var wire   32  aaabi  FLOATING_fdout [31:0]  $end
+$var wire    1  aaabj  FLOATING_fout_valid       $end
+$var wire   32  aaabk  FLOATING_fdestout [31:0]  $end
+$var wire    1  aaabl  PIC_ireq0       $end
+$var wire    1  aaabm  PIC_ireq1       $end
+$var wire    1  aaabn  PIC_ireq2       $end
+$var wire    1  aaabo  PIC_ireq3       $end
+$var wire    1  aaabp  PIC_intreq       $end
+$var wire   32  aaabq  PIC_vectno [31:0]  $end
+$var wire    1  aaabr  PIC_intack_cpu       $end
+$var wire   32  aaabs  GPIO_gpio_data_in [31:0]  $end
+$var wire   32  aaabt  GPIO_gpio_dataout [31:0]  $end
+$var wire   32  aaabu  DMA_addr [31:0]  $end
+$var wire   32  aaabv  DMA_data_in_dma [31:0]  $end
+$var wire    1  aaabw  DMA_i_d_cache       $end
+$var wire    1  aaabx  DMA_valid_data       $end
+$var wire    1  aaaby  DMA_read_write       $end
+$var wire   32  aaabz  DMA_data_out [31:0]  $end
+$var wire    1  aaaca  DMA_dma_access       $end
+$var wire    1  aaacb  CLK       $end
 $upscope $end
 $enddefinitions  $end
 
@@ -65,7 +75,7 @@ $end
 $dumpvars
 1aaaaa
 0aaaab
-b0 aaaac
+b100 aaaac
 b0 aaaad
 b0 aaaae
 0aaaaf
@@ -75,333 +85,187 @@ b0 aaaag
 0aaaaj
 b0 aaaak
 0aaaal
-b0 aaaam
-0aaaan
+1aaaam
+b0 aaaan
 0aaaao
-b0 aaaap
+0aaaap
 b0 aaaaq
-0aaaar
-b0 aaaas
-0aaaat
-b0 aaaau
+b0 aaaar
+0aaaas
+b0 aaaat
+0aaaau
 b0 aaaav
-0aaaaw
+b0 aaaaw
 0aaaax
-b0 aaaay
+0aaaay
 0aaaaz
-0aaaba
+b0 aaaba
 0aaabb
 0aaabc
 0aaabd
-b0 aaabe
-0aaabf
-b0 aaabg
+0aaabe
+b0 aaabf
+0aaabg
 b0 aaabh
-0aaabi
-b0 aaabj
-0aaabk
+b0 aaabi
+0aaabj
+b0 aaabk
 0aaabl
 0aaabm
 0aaabn
 0aaabo
-b0 aaabp
-0aaabq
-1aaabr
+0aaabp
+b0 aaabq
+0aaabr
+b11111111 aaabs
+b0 aaabt
+b0 aaabu
+b0 aaabv
+0aaabw
+0aaabx
+0aaaby
+b0 aaabz
+0aaaca
+1aaacb
 $end
 
 #500
-0aaabr
+0aaacb
 
 #1000
-1aaabr
+1aaacb
 
 #1500
-0aaabr
+0aaacb
 
 #2000
+b1001110000000000000000000000000 aaaae
 1aaaaf
 1aaaah
-1aaabr
+1aaacb
 
 #2500
-0aaabr
+0aaacb
 
 #3000
 0aaaaa
 0aaaaf
+b1001110000000000000000000000000 aaaak
 1aaaal
-1aaabr
+1aaacb
 
 #3500
-0aaabr
+0aaacb
 
 #4000
 0aaaal
-1aaabr
+1aaacb
 
 #4500
-0aaabr
+0aaacb
 
 #5000
-1aaabr
+1aaaap
+1aaaas
+1aaacb
 
 #5500
-0aaabr
+0aaacb
 
 #6000
 1aaaaa
-b1 aaaac
-1aaabr
+b101 aaaac
+0aaaap
+0aaaas
+1aaacb
 
 #6500
-0aaabr
+0aaacb
 
 #7000
-1aaabr
+1aaacb
 
 #7500
-0aaabr
+0aaacb
 
 #8000
-b1010100010011000000000000 aaaae
+b0 aaaae
 1aaaaf
-1aaabr
+1aaacb
 
 #8500
-0aaabr
+0aaacb
 
 #9000
 0aaaaa
 0aaaaf
-b1010100010011000000000000 aaaak
+b0 aaaak
 1aaaal
-1aaabr
+1aaacb
 
 #9500
-0aaabr
+0aaacb
 
 #10000
 0aaaal
-1aaabr
+1aaacb
 
 #10500
-0aaabr
+0aaacb
 
 #11000
-b11 aaaaq
-b101 aaaas
-b1 aaaau
-b11111111111111111111111111111111 aaaav
-1aaaaw
-1aaabr
+1aaacb
 
 #11500
-0aaabr
+0aaacb
 
 #12000
 1aaaaa
-b10 aaaac
-0aaaaw
-1aaabr
+b110 aaaac
+1aaacb
 
 #12500
-0aaabr
+0aaacb
 
 #13000
-1aaabc
-1aaabd
-1aaabf
-b101 aaabg
-1aaabr
+1aaacb
 
 #13500
-0aaabr
+0aaacb
 
 #14000
-b10000100110000000000001110 aaaae
+b11111111111111111111111111111111 aaaae
 1aaaaf
-0aaabf
-1aaabr
+1aaacb
 
 #14500
-0aaabr
+0aaacb
 
 #15000
 0aaaaa
 0aaaaf
-b10000100110000000000001110 aaaak
+b11111111111111111111111111111111 aaaak
 1aaaal
-1aaabr
+1aaacb
 
 #15500
-0aaabr
+0aaacb
 
 #16000
 0aaaal
-1aaabr
+1aaacb
 
 #16500
-0aaabr
+0aaacb
 
 #17000
-b1 aaaas
-b11111111111111111111111111111111 aaaau
-b1110 aaaav
-1aaaaw
-1aaabr
+1aaacb
 
 #17500
-0aaabr
+0aaacb
 
 #18000
 1aaaaa
-b11 aaaac
-0aaaaw
-1aaabr
-
-#18500
-0aaabr
-
-#19000
-0aaabd
-b1101 aaabe
-1aaabf
-b1 aaabg
-1aaabr
-
-#19500
-0aaabr
-
-#20000
-b1001110111100000000000000000010 aaaae
-1aaaaf
-0aaabf
-1aaabr
-
-#20500
-0aaabr
-
-#21000
-0aaaaa
-0aaaaf
-b1001110111100000000000000000010 aaaak
-1aaaal
-1aaabr
-
-#21500
-0aaabr
-
-#22000
-0aaaal
-1aaabr
-
-#22500
-0aaabr
-
-#23000
-1aaaao
-b10 aaaap
-1aaaar
-b10101 aaaau
-1aaabr
-
-#23500
-0aaabr
-
-#24000
-1aaaaa
-b100 aaaac
-0aaaao
-0aaaar
-1aaabr
-
-#24500
-0aaabr
-
-#25000
-1aaabr
-
-#25500
-0aaabr
-
-#26000
-b0 aaaae
-1aaaaf
-1aaabr
-
-#26500
-0aaabr
-
-#27000
-0aaaaa
-0aaaaf
-b0 aaaak
-1aaaal
-1aaabr
-
-#27500
-0aaabr
-
-#28000
-0aaaal
-1aaabr
-
-#28500
-0aaabr
-
-#29000
-1aaabr
-
-#29500
-0aaabr
-
-#30000
-1aaaaa
-b101 aaaac
-1aaabr
-
-#30500
-0aaabr
-
-#31000
-1aaabr
-
-#31500
-0aaabr
-
-#32000
-b11111111111111111111111111111111 aaaae
-1aaaaf
-1aaabr
-
-#32500
-0aaabr
-
-#33000
-0aaaaa
-0aaaaf
-b11111111111111111111111111111111 aaaak
-1aaaal
-1aaabr
-
-#33500
-0aaabr
-
-#34000
-0aaaal
-1aaabr
-
-#34500
-0aaabr
-
-#35000
-1aaabr
-
-#35500
-0aaabr
-
-#36000
-1aaaaa
-b110 aaaac
-1aaabr
+b111 aaaac
+1aaacb
 

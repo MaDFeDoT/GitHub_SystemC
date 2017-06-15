@@ -1,0 +1,21 @@
+﻿Build started 14.06.2017 22:53:33.
+     1>Project "D:\Study\SystemC\GitHub_SystemC\modul test\Dcache\Processor\processor.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /vmg main.cpp
+         main.cpp
+     1>d:\study\systemc\systemc-2.3.1a\src\sysc\datatypes\int\sc_nbutils.h(151): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\study\systemc\github_systemc\modul test\dcache\processor\dcache.h(28): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\study\systemc\github_systemc\modul test\dcache\processor\dcache.h(34): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>d:\study\systemc\github_systemc\modul test\dcache\processor\dcache.h(75): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Study\SystemC\GitHub_SystemC\modul test\Dcache\Processor\Debug\processor.exe" /INCREMENTAL /NOLOGO SystemC.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Study\SystemC\GitHub_SystemC\modul test\Dcache\Processor\Debug\processor.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Study\SystemC\GitHub_SystemC\modul test\Dcache\Processor\Debug\processor.lib" /MACHINE:X86 Debug\main.obj
+         processor.vcxproj -> D:\Study\SystemC\GitHub_SystemC\modul test\Dcache\Processor\Debug\processor.exe
+     1>Done Building Project "D:\Study\SystemC\GitHub_SystemC\modul test\Dcache\Processor\processor.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.15

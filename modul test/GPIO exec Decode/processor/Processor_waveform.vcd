@@ -1,0 +1,285 @@
+$date
+     Jun 15, 2017       02:04:07
+$end
+
+$version
+ SystemC 2.3.1-Accellera --- Feb 18 2017 01:17:28
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  ICACHE_ram_cs       $end
+$var wire    1  aaaab  ICACHE_ram_we       $end
+$var wire   32  aaaac  ICACHE_addr [31:0]  $end
+$var wire   32  aaaad  ICACHE_ram_datain [31:0]  $end
+$var wire   32  aaaae  ICACHE_ram_dataout [31:0]  $end
+$var wire    1  aaaaf  ICACHE_icache_valid       $end
+$var wire   32  aaaag  FETCH_branch_target_address [31:0]  $end
+$var wire    1  aaaah  FETCH_next_pc       $end
+$var wire    1  aaaai  FETCH_branch_valid       $end
+$var wire    1  aaaaj  FETCH_stall_fetch       $end
+$var wire   32  aaaak  FETCH_instruction [31:0]  $end
+$var wire    1  aaaal  FETCH_instruction_valid       $end
+$var wire    1  aaaam  FETCH_busy       $end
+$var wire   32  aaaan  DECODE_dram_dataout [31:0]  $end
+$var wire    1  aaaao  DECODE_dram_rd_valid       $end
+$var wire    1  aaaap  DECODE_mem_access       $end
+$var wire   32  aaaaq  DECODE_mem_address [31:0]  $end
+$var wire   32  aaaar  DECODE_alu_op [31:0]  $end
+$var wire    1  aaaas  DECODE_mem_write       $end
+$var wire   32  aaaat  DECODE_alu_src [31:0]  $end
+$var wire    1  aaaau  DECODE_reg_write       $end
+$var wire   32  aaaav  DECODE_src_A [31:0]  $end
+$var wire   32  aaaaw  DECODE_src_B [31:0]  $end
+$var wire    1  aaaax  DECODE_decode_valid       $end
+$var wire    1  aaaay  DECODE_float_valid       $end
+$var wire    1  aaaaz  DECODE_gpio_access       $end
+$var wire   32  aaaba  DECODE_dramdata [31:0]  $end
+$var wire    1  aaabb  EXEC_in_valid       $end
+$var wire    1  aaabc  EXEC_c       $end
+$var wire    1  aaabd  EXEC_v       $end
+$var wire    1  aaabe  EXEC_z       $end
+$var wire   32  aaabf  EXEC_dout [31:0]  $end
+$var wire    1  aaabg  EXEC_out_valid       $end
+$var wire   32  aaabh  EXEC_destout [31:0]  $end
+$var wire   32  aaabi  FLOATING_fdout [31:0]  $end
+$var wire    1  aaabj  FLOATING_fout_valid       $end
+$var wire   32  aaabk  FLOATING_fdestout [31:0]  $end
+$var wire    1  aaabl  PIC_ireq0       $end
+$var wire    1  aaabm  PIC_ireq1       $end
+$var wire    1  aaabn  PIC_ireq2       $end
+$var wire    1  aaabo  PIC_ireq3       $end
+$var wire    1  aaabp  PIC_intreq       $end
+$var wire   32  aaabq  PIC_vectno [31:0]  $end
+$var wire    1  aaabr  PIC_intack_cpu       $end
+$var wire   32  aaabs  GPIO_gpio_data_in [31:0]  $end
+$var wire   32  aaabt  GPIO_gpio_dataout [31:0]  $end
+$var wire   32  aaabu  DMA_addr [31:0]  $end
+$var wire   32  aaabv  DMA_data_in_dma [31:0]  $end
+$var wire    1  aaabw  DMA_i_d_cache       $end
+$var wire    1  aaabx  DMA_valid_data       $end
+$var wire    1  aaaby  DMA_read_write       $end
+$var wire   32  aaabz  DMA_data_out [31:0]  $end
+$var wire    1  aaaca  DMA_dma_access       $end
+$var wire    1  aaacb  CLK       $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaaaa
+0aaaab
+b100 aaaac
+b0 aaaad
+b0 aaaae
+0aaaaf
+b0 aaaag
+0aaaah
+0aaaai
+0aaaaj
+b0 aaaak
+0aaaal
+1aaaam
+b0 aaaan
+0aaaao
+0aaaap
+b0 aaaaq
+b0 aaaar
+0aaaas
+b0 aaaat
+0aaaau
+b0 aaaav
+b0 aaaaw
+0aaaax
+0aaaay
+0aaaaz
+b0 aaaba
+0aaabb
+0aaabc
+0aaabd
+0aaabe
+b0 aaabf
+0aaabg
+b0 aaabh
+b0 aaabi
+0aaabj
+b0 aaabk
+0aaabl
+0aaabm
+0aaabn
+0aaabo
+0aaabp
+b0 aaabq
+0aaabr
+b11111111 aaabs
+b0 aaabt
+b0 aaabu
+b0 aaabv
+0aaabw
+0aaabx
+0aaaby
+b0 aaabz
+0aaaca
+1aaacb
+$end
+
+#500
+0aaacb
+
+#1000
+1aaacb
+
+#1500
+0aaacb
+
+#2000
+b1000000010010000000000000 aaaae
+1aaaaf
+1aaaah
+1aaacb
+
+#2500
+0aaacb
+
+#3000
+0aaaaa
+0aaaaf
+b1000000010010000000000000 aaaak
+1aaaal
+1aaacb
+
+#3500
+0aaacb
+
+#4000
+0aaaal
+1aaacb
+
+#4500
+0aaacb
+
+#5000
+b11 aaaar
+b100 aaaav
+b101 aaaaw
+1aaaax
+1aaacb
+
+#5500
+0aaacb
+
+#6000
+1aaaaa
+b101 aaaac
+0aaaax
+1aaacb
+
+#6500
+0aaacb
+
+#7000
+1aaabd
+b1001 aaabf
+1aaabg
+1aaacb
+
+#7500
+0aaacb
+
+#8000
+b111001101000101000000000000 aaaae
+1aaaaf
+0aaabg
+1aaacb
+
+#8500
+0aaacb
+
+#9000
+0aaaaa
+0aaaaf
+b111001101000101000000000000 aaaak
+1aaaal
+1aaacb
+
+#9500
+0aaacb
+
+#10000
+0aaaal
+1aaacb
+
+#10500
+0aaacb
+
+#11000
+b101 aaaar
+b11 aaaat
+b10 aaaav
+1aaaax
+1aaacb
+
+#11500
+0aaacb
+
+#12000
+1aaaaa
+b110 aaaac
+0aaaax
+1aaacb
+
+#12500
+0aaacb
+
+#13000
+b1010 aaabf
+1aaabg
+b11 aaabh
+1aaacb
+
+#13500
+0aaacb
+
+#14000
+b11111111111111111111111111111111 aaaae
+1aaaaf
+0aaabg
+1aaacb
+
+#14500
+0aaacb
+
+#15000
+0aaaaa
+0aaaaf
+b11111111111111111111111111111111 aaaak
+1aaaal
+1aaacb
+
+#15500
+0aaacb
+
+#16000
+0aaaal
+1aaacb
+
+#16500
+0aaacb
+
+#17000
+1aaacb
+
+#17500
+0aaacb
+
+#18000
+1aaaaa
+b111 aaaac
+1aaacb
+

@@ -1,0 +1,182 @@
+$date
+     Jun 14, 2017       22:53:39
+$end
+
+$version
+ SystemC 2.3.1-Accellera --- Feb 18 2017 01:17:28
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire   32  aaaaa  DCACHE_dram_dataout [31:0]  $end
+$var wire    1  aaaab  DCACHE_dram_rd_valid       $end
+$var wire    1  aaaac  DCACHE_mem_access       $end
+$var wire   32  aaaad  DCACHE_mem_address [31:0]  $end
+$var wire    1  aaaae  DCACHE_mem_write       $end
+$var wire   32  aaaaf  DCACHE_dramdata [31:0]  $end
+$var wire    1  aaaag  CLK       $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+b0 aaaaa
+0aaaab
+0aaaac
+b0 aaaad
+0aaaae
+b0 aaaaf
+1aaaag
+$end
+
+#500
+0aaaag
+
+#1000
+1aaaag
+
+#1500
+0aaaag
+
+#2000
+1aaaag
+
+#2500
+0aaaag
+
+#3000
+1aaaag
+
+#3500
+0aaaag
+
+#4000
+1aaaag
+
+#4500
+0aaaag
+
+#5000
+1aaaag
+
+#5500
+0aaaag
+
+#6000
+1aaaac
+b11 aaaad
+1aaaag
+
+#6500
+0aaaag
+
+#7000
+b11 aaaaa
+1aaaab
+1aaaag
+
+#7500
+0aaaag
+
+#8000
+0aaaab
+0aaaac
+1aaaag
+
+#8500
+0aaaag
+
+#9000
+1aaaag
+
+#9500
+0aaaag
+
+#10000
+1aaaac
+1aaaae
+b11111111 aaaaf
+1aaaag
+
+#10500
+0aaaag
+
+#11000
+1aaaag
+
+#11500
+0aaaag
+
+#12000
+0aaaac
+1aaaag
+
+#12500
+0aaaag
+
+#13000
+1aaaag
+
+#13500
+0aaaag
+
+#14000
+1aaaag
+
+#14500
+0aaaag
+
+#15000
+1aaaag
+
+#15500
+0aaaag
+
+#16000
+1aaaag
+
+#16500
+0aaaag
+
+#17000
+1aaaag
+
+#17500
+0aaaag
+
+#18000
+1aaaac
+0aaaae
+1aaaag
+
+#18500
+0aaaag
+
+#19000
+b11111111 aaaaa
+1aaaab
+1aaaag
+
+#19500
+0aaaag
+
+#20000
+0aaaab
+0aaaac
+1aaaag
+
+#20500
+0aaaag
+
+#21000
+1aaaag
+
+#21500
+0aaaag
+
